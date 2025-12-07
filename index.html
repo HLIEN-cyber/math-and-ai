@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI 數學互動展示</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero__content">
+      <p class="eyebrow">Math x AI</p>
+      <h1>AI 製作的 5 個互動數學體驗</h1>
+      <p class="lede">透過 AI 生成的互動頁面，快速瀏覽雙語數學詞彙、三角函數與摩天輪、硬幣策略、函數相加與無理數等主題。</p>
+      <div class="hero__actions">
+        <label class="search">
+          <span class="search__icon" aria-hidden="true">🔍</span>
+          <input id="search" type="search" placeholder="搜尋主題或關鍵字" aria-label="搜尋專案" />
+        </label>
+        <div class="filters" aria-label="篩選分類">
+          <button class="filter-button active" data-filter="all">全部</button>
+          <button class="filter-button" data-filter="vocab">詞彙</button>
+          <button class="filter-button" data-filter="trig">三角函數</button>
+          <button class="filter-button" data-filter="prob">機率</button>
+          <button class="filter-button" data-filter="analysis">函數</button>
+          <button class="filter-button" data-filter="number">數論</button>
+        </div>
+      </div>
+      <p class="helper" id="results-count" aria-live="polite"></p>
+    </div>
+  </header>
+
+  <main class="grid" aria-label="AI 互動專案清單">
+    <article class="project-card" data-category="vocab" data-title="雙語數學詞彙" data-summary="英中雙語的數學詞彙表與簡明圖示，適合課堂快查。">
+      <div class="project-card__header">
+        <span class="badge">雙語詞彙</span>
+        <span class="pill">概念速查</span>
+      </div>
+      <h2>雙語數學詞彙</h2>
+      <p>用 AI 生成的英中對照詞彙表，讓學生能快速建立關鍵的數學字彙基礎。</p>
+      <div class="project-card__actions">
+        <a class="button" href="https://claude.ai/public/artifacts/e82d2b72-9544-4514-948f-7debc98501f6" target="_blank" rel="noopener">開啟體驗</a>
+        <button class="ghost open-detail" type="button">了解更多</button>
+      </div>
+    </article>
+
+    <article class="project-card" data-category="trig" data-title="三角函數與摩天輪模擬器" data-summary="互動模擬摩天輪座艙的高度隨時間變化，並顯示對應的正弦曲線。">
+      <div class="project-card__header">
+        <span class="badge">三角函數</span>
+        <span class="pill">模擬</span>
+      </div>
+      <h2>三角函數與摩天輪模擬器</h2>
+      <p>將摩天輪運動與正弦波對應，示範振幅、周期與相位的視覺化，支援多組參數切換。</p>
+      <div class="project-card__actions">
+        <a class="button" href="https://claude.ai/public/artifacts/c28c9378-858f-4f39-b040-997facc56fa1" target="_blank" rel="noopener">開啟體驗</a>
+        <button class="ghost open-detail" type="button">了解更多</button>
+      </div>
+    </article>
+
+    <article class="project-card" data-category="prob" data-title="投擲硬幣的贏策略" data-summary="探討硬幣博弈的最佳策略，透過可視化的勝率與決策路徑展示。">
+      <div class="project-card__header">
+        <span class="badge">機率</span>
+        <span class="pill">策略</span>
+      </div>
+      <h2>投擲硬幣的贏策略</h2>
+      <p>以互動流程說明硬幣投擲遊戲的勝率推導與決策建議，理解隨機事件下的理性選擇。</p>
+      <div class="project-card__actions">
+        <a class="button" href="https://gemini.google.com/share/781a6f5b4a93" target="_blank" rel="noopener">開啟體驗</a>
+        <button class="ghost open-detail" type="button">了解更多</button>
+      </div>
+    </article>
+
+    <article class="project-card" data-category="analysis" data-title="函數相加後" data-summary="可視化兩個函數疊加後的形狀變化，並展示對應的代數式。">
+      <div class="project-card__header">
+        <span class="badge">函數</span>
+        <span class="pill">合成</span>
+      </div>
+      <h2>函數相加後</h2>
+      <p>透過圖形將兩個輸入函數與相加結果並列，幫助學生直觀理解函數加法的效果。</p>
+      <div class="project-card__actions">
+        <a class="button" href="https://claude.ai/public/artifacts/bbc3fe32-02fa-4b96-848a-0c9c039dd553" target="_blank" rel="noopener">開啟體驗</a>
+        <button class="ghost open-detail" type="button">了解更多</button>
+      </div>
+    </article>
+
+    <article class="project-card" data-category="number" data-title="打擊無理的你" data-summary="以遊戲化的小測驗探討無理數與有理數，並給予立即回饋。">
+      <div class="project-card__header">
+        <span class="badge">數論</span>
+        <span class="pill">小遊戲</span>
+      </div>
+      <h2>打擊無理的你</h2>
+      <p>兼具趣味與挑戰的無理數辨識遊戲，逐步解鎖新題型，適合課堂或自主練習。</p>
+      <div class="project-card__actions">
+        <a class="button" href="https://claude.ai/public/artifacts/11d722a4-8d04-44c2-b9be-d00f506446b7" target="_blank" rel="noopener">開啟體驗</a>
+        <button class="ghost open-detail" type="button">了解更多</button>
+      </div>
+    </article>
+  </main>
+
+  <section class="cta">
+    <div class="cta__content">
+      <h2>如何使用</h2>
+      <ol>
+        <li>用搜尋框快速找到感興趣的主題，或按下分類按鈕縮小範圍。</li>
+        <li>點擊「開啟體驗」在新分頁查看原始互動頁面。</li>
+        <li>選擇「了解更多」可在本頁彈出視窗中查看摘要與複製連結。</li>
+      </ol>
+    </div>
+    <div class="cta__card">
+      <p>這些頁面皆由 AI 生成，適合作為課堂投影片、課後補充或靈感來源。</p>
+      <button id="reset" class="ghost">重置搜尋與篩選</button>
+    </div>
+  </section>
+
+  <dialog class="modal" data-modal>
+    <div class="modal__body">
+      <button class="close" type="button" aria-label="關閉" data-close>✕</button>
+      <p class="badge" data-modal-category></p>
+      <h3 data-modal-title></h3>
+      <p data-modal-summary></p>
+      <div class="modal__actions">
+        <a class="button" data-modal-link target="_blank" rel="noopener">前往互動頁面</a>
+        <button class="ghost" type="button" data-copy>複製連結</button>
+      </div>
+      <p class="copied" hidden>已複製連結！</p>
+    </div>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
